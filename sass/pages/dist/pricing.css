@@ -1,0 +1,123 @@
+#plan h1 {
+  color: #282938;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 64px;
+}
+
+#plan .plan__cards .plan__card h2 {
+  color: #282938;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 56px;
+}
+
+#plan .plan__cards .plan__card h4 {
+  color: #282938;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+#plan .plan__cards .plan__card h6 {
+  color: #282938;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#plan {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+#plan h1 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+#plan p {
+  max-width: 562px;
+  width: 100%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+#plan .plan__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media (min-width: 990px) {
+  #plan .plan__cards {
+    flex-direction: row;
+  }
+}
+#plan .plan__cards .plan__card {
+  max-width: 400px;
+  width: 100%;
+  padding: 60px 10px 62px 10px;
+  background-color: #F4F6FC;
+  transition: 0.5s;
+}
+@media (min-width: 990px) {
+  #plan .plan__cards .plan__card {
+    padding-top: 64px;
+    padding-left: 48px;
+  }
+}
+#plan .plan__cards .plan__card:hover {
+  background-color: #1C1E53;
+}
+#plan .plan__cards .plan__card:hover h2, #plan .plan__cards .plan__card:hover h4, #plan .plan__cards .plan__card:hover h6, #plan .plan__cards .plan__card:hover a {
+  color: #fff;
+}
+#plan .plan__cards .plan__card:hover span {
+  color: #FCD980;
+}
+#plan .plan__cards .plan__card:hover button {
+  background-color: #FCD980;
+  color: black;
+}
+#plan .plan__cards .plan__card h2 span {
+  font-size: 16px;
+  color: #2405F2;
+  vertical-align: middle;
+}
+#plan .plan__cards .plan__card h4 {
+  margin-top: 20px;
+}
+#plan .plan__cards .plan__card h6 {
+  margin-bottom: 80px;
+}
+#plan .plan__cards .plan__card a, #plan .plan__cards .plan__card button {
+  display: block;
+  margin-bottom: 20px;
+  color: black;
+}
+#plan .plan__cards .plan__card a img, #plan .plan__cards .plan__card button img {
+  margin-right: 12px;
+}
+#plan .plan__cards .plan__card button {
+  background-color: #FCD980;
+  padding: 16px 48px;
+  border-radius: 40px;
+  color: #1B1C2A;
+  font-size: 18px;
+  line-height: 32px;
+  border: none;
+  cursor: pointer;
+  background-color: #282938;
+  margin-top: 60px;
+  margin-bottom: 0;
+  color: #fff;
+  transition: 0.5s;
+}

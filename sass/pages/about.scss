@@ -1,0 +1,154 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins" as mxn;
+@use "../utils/helpers";
+@use "../global";
+
+#about{
+    padding-top: 128px;
+    padding-bottom: 128px;
+
+    .about__container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        @media(min-width:1200px){
+            flex-direction: row;
+            gap: 30px;
+            justify-content: space-between;
+        }
+    
+    
+    .about__info{
+        max-width: 540px;
+        width: 100%;
+        margin-bottom: 50px;
+        text-align: center;
+        @media(min-width:1200px){
+            text-align: left;
+        }
+        h1{
+            @extend %title__18__primary;
+            margin-bottom: 8px;
+        }
+        h2{
+            @extend %title__54__primary;
+            margin-bottom: 31px;
+        }
+        p{
+            @extend %title__16__primary;
+        }
+    }
+
+    img{
+        max-width: 640px;
+        width: 100%;
+    }
+}
+}
+
+
+/*Aim Styles*/
+#aim{
+    padding-bottom: 96px;
+    .aim__infos{
+        background-color: #F4F5F5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @media(min-width:990px){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &--left{
+            padding: 96px 30px 80px 40px;
+            h1{
+                font-size: 32px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &--right{
+            padding: 96px 30px 80px 40px;
+            h1{
+                font-size: 32px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
+
+
+/*team Styles*/
+#team{
+    padding-top: 128px;
+    padding-bottom: 128px;
+    background-color: #F4F6FC;
+    h1{
+        @extend %title__48__primary;
+        margin-bottom: 48px;
+        text-align: center;
+    }
+    .team__cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        @media(min-width:800px){
+            grid-template-columns: 1fr 1fr;
+        }
+        @media(min-width:1200px){
+            grid-template-columns:1fr 1fr 1fr 1fr;
+        }
+        .team__card{
+            background-color: #fff;
+            max-width: 300px;
+            width: 100%;
+            padding: 48px 64px 48px 64px;
+            position: relative;
+            transform: scale(0.9);
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1);
+                box-shadow: 2px 2px 10px black;
+                cursor: pointer;
+            }
+            &:hover .medias{
+                opacity: 1;
+            }
+            &:hover img{
+                filter: blur(0);
+            }
+            img{
+                filter: blur(1px);
+                width: 100%;
+            }
+            .medias{
+                position: absolute;
+                opacity: 0;
+                top: 175px;
+                left: 100px;
+                right: 0;
+                transition: 0.5s;
+                cursor: pointer;
+                @media(min-width:352px){
+                    left:125px;
+                }
+            }
+            h4{
+                @extend %title__24__primary;
+                margin-top: 30px;
+                text-align: center
+            }
+            p{
+                @extend %title__16__primary;
+                margin-top: 2px;
+                text-align: center;
+            }
+        }
+    }
+}

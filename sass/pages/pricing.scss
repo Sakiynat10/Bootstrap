@@ -1,0 +1,103 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins" as mxn;
+@use "../utils/helpers";
+@use "../global";
+
+#plan{
+    padding-top: 128px;
+    padding-bottom: 128px;
+    h1{
+        @extend %title__48__primary;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    p{
+        max-width: 562px;
+        width: 100%;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .plan__cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        @media(min-width:990px){
+            flex-direction: row;
+            
+        }
+        .plan__card{
+            max-width: 400px;
+            width: 100%;
+            padding: 60px 10px 62px 10px;
+            background-color: #F4F6FC;
+            transition: 0.5s;
+            @media(min-width:990px){
+                padding-top: 64px;
+                padding-left: 48px;
+            }
+
+            &:hover{
+                background-color: #1C1E53;
+            }
+            &:hover h2,
+            &:hover h4,
+            &:hover h6,
+            &:hover a{
+                color: #fff
+            }
+
+            &:hover span{
+                color: #FCD980;
+            }
+            
+            &:hover button{
+                background-color: #FCD980;
+                color: black
+            }
+            h2{
+                @extend %title__38__primary;
+                span{
+                    font-size: 16px;
+                    color: #2405F2;
+                    vertical-align: middle;
+                }
+
+                
+            }
+
+            h4{
+                margin-top: 20px;
+                @extend %title__24__primary;
+            }
+            h6{
+                @extend %title__16__primary;
+                margin-bottom: 80px;
+            }
+
+
+
+            a, button{
+                display: block;
+                margin-bottom: 20px;
+                color: black;
+                img{
+                    margin-right: 12px;
+                }
+            }
+
+            button{
+                @include mxn.btn;
+                background-color: #282938;
+                margin-top: 60px;
+                margin-bottom: 0;
+                color: #fff;
+                transition: 0.5s;
+            }
+        }
+    }
+}

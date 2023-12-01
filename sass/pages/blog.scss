@@ -1,0 +1,84 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins" as mxn;
+@use "../utils/helpers";
+@use "../global";
+
+#study{
+    padding-top: 128px;
+    padding-bottom: 128px;
+    h1{
+        @extend %title__32__primary;
+        max-width: 749px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 16px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    p{
+        @extend %title__16__primary;
+        max-width: 831px;
+        margin-bottom: 32px;
+        margin-top: 48px;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    a{
+        text-align: center;
+        display: block;
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+#blog{
+    padding-bottom: 128px;
+    h1{
+        font-size: 48px;
+        text-align: center;
+        padding-bottom: 48px;
+    }
+    .blog__cards{
+        .blog__card{
+            overflow: hidden;
+            vertical-align: middle;
+            transition: 0.5s;
+
+            &:hover{
+                box-shadow: 1px 1px 10px rgb(204, 200, 200);
+            }
+            
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            img{
+                width: 100%;
+                transition: 0.5s;
+            }
+            p{
+                padding-top: 32px;
+                padding-bottom: 16px;
+            }
+
+            h3{
+                font-size: 24px;
+                margin-bottom: 16px;
+            }
+            a{
+                display: block;
+                padding-top: 24px;
+                padding-bottom: 32px;
+                img{
+                    width: 20px;
+                    margin-left: 12px;
+                    color: black;
+                }
+            }
+        }
+    }
+}
