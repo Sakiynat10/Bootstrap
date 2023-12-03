@@ -12,12 +12,98 @@
   line-height: 28px;
 }
 
+#backtop {
+  position: fixed;
+  bottom: 1200px;
+  right: 50px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+#backtop a {
+  padding: 30px;
+}
+#backtop a img {
+  width: 20px;
+}
+
+#backtop.backtop-show {
+  z-index: 99;
+  bottom: 50px;
+}
+#backtop.backtop-show a {
+  padding: 30px;
+}
+#backtop.backtop-show a img {
+  width: 30px;
+}
+
+#mode-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.dark main,
+.dark #plan,
+.dark #info,
+.dark #clients,
+.dark #features,
+.dark #about,
+.dark #aim,
+.dark #team,
+.dark #contact {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgb(10, 10, 36))) !important;
+  background: linear-gradient(black, rgb(10, 10, 36)) !important;
+}
+
+.dark #contact * {
+  color: black !important;
+}
+
+.dark * {
+  color: white !important;
+}
+
+.dark #aim * {
+  color: black !important;
+}
+
 ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
+}
+
+.bg-dark {
+  background-color: #1C1E53 !important;
+}
+
+#navbar {
+  padding: 30px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#navbar.navbar-shrink {
+  padding: 10px 0;
+  -webkit-box-shadow: 0 0 10px #373979;
+          box-shadow: 0 0 10px #373979;
+}
+
+.offcanvas-body .navbar-nav {
+  gap: 40px;
+}
+.offcanvas-body .navbar-nav .nav__contact {
+  padding: 16px 48px;
+  border-radius: 41px;
+  border: 2px solid rgba(244, 246, 252, 0.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.offcanvas-body .navbar-nav .nav__contact:hover {
+  border: 2px solid #FCD980;
+  color: #FCD980 !important;
 }
 
 #study {

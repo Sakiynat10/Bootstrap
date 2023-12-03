@@ -1,0 +1,52 @@
+#backtop {
+  position: fixed;
+  bottom: 1200px;
+  right: 50px;
+  transition: 1s;
+}
+#backtop a {
+  padding: 30px;
+}
+#backtop a img {
+  width: 20px;
+}
+
+#backtop.backtop-show {
+  z-index: 99;
+  bottom: 50px;
+}
+#backtop.backtop-show a {
+  padding: 30px;
+}
+#backtop.backtop-show a img {
+  width: 30px;
+}
+
+#mode-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.dark main,
+.dark #plan,
+.dark #info,
+.dark #clients,
+.dark #features,
+.dark #about,
+.dark #aim,
+.dark #team,
+.dark #contact {
+  background: linear-gradient(black, #0a0a24) !important;
+}
+
+.dark #contact * {
+  color: black !important;
+}
+
+.dark * {
+  color: white !important;
+}
+
+.dark #aim * {
+  color: black !important;
+}

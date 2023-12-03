@@ -1,17 +1,54 @@
-@use "../utils/variables" as var;
-@use "../utils/mixins" as mxn;
+@use "../utils/variables"as var;
+@use "../utils/mixins"as mxn;
 @use "../utils/helpers";
+@use "../themes/backtop";
 @use "../global";
 
-#plan{
-    padding-top: 128px;
+.bg-dark {
+    background-color: #1C1E53 !important;
+}
+
+#navbar {
+    padding: 30px 0;
+    transition: 0.5s;
+}
+
+#navbar.navbar-shrink {
+    padding: 10px 0;
+    box-shadow: 0 0 10px #373979;
+}
+
+.offcanvas-body {
+    .navbar-nav {
+        gap: 40px;
+
+        .nav__contact {
+            padding: 16px 48px;
+            border-radius: 41px;
+            border: 2px solid rgba(244, 246, 252, 0.20);
+            transition: 0.5s;
+
+            &:hover {
+                border: 2px solid var.$btn-nbg-color;
+                color: var.$btn-nbg-color !important;
+            }
+        }
+    }
+
+}
+
+
+#plan {
+    padding-top: 218px;
     padding-bottom: 128px;
-    h1{
+
+    h1 {
         @extend %title__48__primary;
         text-align: center;
         margin-bottom: 16px;
     }
-    p{
+
+    p {
         max-width: 562px;
         width: 100%;
         text-align: center;
@@ -19,84 +56,196 @@
         margin-left: auto;
     }
 
-    .plan__cards{
+    .plan__cards {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 20px;
 
-        @media(min-width:990px){
+        @media(min-width:990px) {
             flex-direction: row;
-            
+
         }
-        .plan__card{
+
+        .plan__card {
             max-width: 400px;
             width: 100%;
             padding: 60px 10px 62px 10px;
             background-color: #F4F6FC;
             transition: 0.5s;
-            @media(min-width:990px){
+
+            @media(min-width:990px) {
                 padding-top: 64px;
                 padding-left: 48px;
             }
 
-            &:hover{
+            &:hover {
                 background-color: #1C1E53;
             }
+
             &:hover h2,
             &:hover h4,
             &:hover h6,
-            &:hover a{
-                color: #fff
+            &:hover a {
+                color: #fff !important;
             }
 
-            &:hover span{
+            &:hover span {
                 color: #FCD980;
+                color: black !important;
             }
-            
-            &:hover button{
+
+            &:hover button {
                 background-color: #FCD980;
-                color: black
+                color: black !important;
             }
-            h2{
+
+            h2 {
                 @extend %title__38__primary;
-                span{
+                color: #1C1E53 !important;
+
+                span {
                     font-size: 16px;
-                    color: #2405F2;
+                    color: #2405F2 !important;
                     vertical-align: middle;
                 }
 
-                
+
             }
 
-            h4{
+            h4 {
                 margin-top: 20px;
                 @extend %title__24__primary;
+                color: #1C1E53 !important;
             }
-            h6{
+
+            h6 {
                 @extend %title__16__primary;
+                color: #1C1E53 !important;
                 margin-bottom: 80px;
             }
 
 
 
-            a, button{
+            a,
+            button {
                 display: block;
                 margin-bottom: 20px;
-                color: black;
-                img{
+                color: black !important;
+
+                img {
                     margin-right: 12px;
                 }
             }
 
-            button{
+            button {
                 @include mxn.btn;
                 background-color: #282938;
                 margin-top: 60px;
                 margin-bottom: 0;
-                color: #fff;
+                color: #fff !important;
                 transition: 0.5s;
+            }
+        }
+    }
+}
+
+
+
+/*Info Styles*/
+
+
+#info{
+    padding-top: 100px;
+    padding-bottom: 128px;
+    .info__left{
+        margin-bottom: 50px;
+        max-width: 406px;
+        h1{
+            @extend %title__48__primary;
+        }
+        a{
+            @extend %title__18__primary;
+            color: #2405F2 !important;
+        }
+    }
+    
+    .accordion__info {
+        max-width: 843px;
+        
+        h4{
+            @extend %title__24__primary;
+            color: black !important;
+            span{
+                color: #2405F2 !important;
+            }
+        }
+        .accordion-button::after {
+            background-image: url('../image/+.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+        .accordion-button:not(.collapsed)::after{
+            transform: rotate(45deg);
+        }
+    
+        .accordion-body{
+            color: black !important;
+        }
+    
+    }
+}
+
+
+/*Footer Styles*/
+#footer{
+    background-color: #1C1E53;
+    padding-top: 104px;
+    padding-bottom: 90px;
+    .footer__left{
+        max-width: 517px;
+        a{
+            img{
+                width: 162px;
+                height: 32px;
+            }
+        }
+        p{
+            margin-top: 23px;
+            max-width: 400px;
+            @extend %title__16__white;
+        }
+
+        &--bottom{
+            margin-top: 86px;
+            padding: 18px 37px;
+            background-color: #FCD980;
+            h5{
+                @extend %title__18__primary;
+            }
+            p{
+                @extend %title__16__primary;
+            }
+        }
+    }
+    .footer__right{
+        max-width: 399px;
+        h1{
+            @extend %title__48__white;
+        }
+        p{
+            margin-top: 14px;
+            @extend %title__16__white;
+        }
+        .medias{
+            a{
+                font-size: 30px;
+                img{
+                    width: 30px;
+                }
             }
         }
     }

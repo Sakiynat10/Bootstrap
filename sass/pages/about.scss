@@ -1,10 +1,45 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins" as mxn;
 @use "../utils/helpers";
+@use "../themes/backtop";
 @use "../global";
 
+.bg-dark {
+    background-color: #1C1E53 !important;
+}
+
+#navbar {
+    padding: 30px 0;
+    transition: 0.5s;
+}
+
+#navbar.navbar-shrink {
+    padding: 10px 0;
+    box-shadow: 0 0 10px #373979;
+}
+
+.offcanvas-body {
+    .navbar-nav {
+        gap: 40px;
+
+        .nav__contact {
+            padding: 16px 48px;
+            border-radius: 41px;
+            border: 2px solid rgba(244, 246, 252, 0.20);
+            transition: 0.5s;
+
+            &:hover {
+                border: 2px solid var.$btn-nbg-color;
+                color: var.$btn-nbg-color !important;
+            }
+        }
+    }
+
+}
+
+
 #about{
-    padding-top: 128px;
+    padding-top: 188px;
     padding-bottom: 128px;
 
     .about__container{
@@ -141,13 +176,66 @@
             }
             h4{
                 @extend %title__24__primary;
+                color: black !important;
                 margin-top: 30px;
                 text-align: center
             }
             p{
                 @extend %title__16__primary;
+                color: black !important;
                 margin-top: 2px;
                 text-align: center;
+            }
+        }
+    }
+}
+
+/*Footer Styles*/
+#footer{
+    background-color: #1C1E53;
+    padding-top: 104px;
+    padding-bottom: 90px;
+    .footer__left{
+        max-width: 517px;
+        a{
+            img{
+                width: 162px;
+                height: 32px;
+            }
+        }
+        p{
+            margin-top: 23px;
+            max-width: 400px;
+            @extend %title__16__white;
+        }
+
+        &--bottom{
+            margin-top: 86px;
+            padding: 18px 37px;
+            background-color: #FCD980;
+            h5{
+                @extend %title__18__primary;
+            }
+            p{
+                @extend %title__16__primary;
+            }
+        }
+    }
+    .footer__right{
+        max-width: 399px;
+        h1{
+            @extend %title__48__white;
+        }
+        p{
+            margin-top: 14px;
+            @extend %title__16__white;
+        }
+        .medias{
+            a{
+                font-size: 30px;
+                img{
+                    width: 30px;
+                }
             }
         }
     }

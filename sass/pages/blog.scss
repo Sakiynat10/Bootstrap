@@ -1,7 +1,42 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins" as mxn;
 @use "../utils/helpers";
+@use "../themes/backtop";
 @use "../global";
+
+.bg-dark {
+    background-color: #1C1E53 !important;
+}
+
+#navbar {
+    padding: 30px 0;
+    transition: 0.5s;
+}
+
+#navbar.navbar-shrink {
+    padding: 10px 0;
+    box-shadow: 0 0 10px #373979;
+}
+
+.offcanvas-body {
+    .navbar-nav {
+        gap: 40px;
+
+        .nav__contact {
+            padding: 16px 48px;
+            border-radius: 41px;
+            border: 2px solid rgba(244, 246, 252, 0.20);
+            transition: 0.5s;
+
+            &:hover {
+                border: 2px solid var.$btn-nbg-color;
+                color: var.$btn-nbg-color !important;
+            }
+        }
+    }
+
+}
+
 
 #study{
     padding-top: 128px;

@@ -1,0 +1,217 @@
+@use "../utils/variables"as var;
+@use "../utils/mixins"as mxn;
+@use "../utils/helpers";
+@use "../themes/backtop";
+@use "../global";
+
+.bg-dark {
+    background-color: #1C1E53 !important;
+}
+
+#navbar {
+    padding: 30px 0;
+    transition: 0.5s;
+}
+
+#navbar.navbar-shrink {
+    padding: 10px 0;
+    box-shadow: 0 0 10px #373979;
+}
+
+.offcanvas-body {
+    .navbar-nav {
+        gap: 40px;
+
+        .nav__contact {
+            padding: 16px 48px;
+            border-radius: 41px;
+            border: 2px solid rgba(244, 246, 252, 0.20);
+            transition: 0.5s;
+
+            &:hover {
+                border: 2px solid var.$btn-nbg-color;
+                color: var.$btn-nbg-color !important;
+            }
+        }
+    }
+
+}
+
+
+/*Portfolio Styles*/
+#portfolio{
+    padding-top: 186px;
+    padding-bottom: 96px;
+    background-color: #F4F6FC;
+
+    h6{
+        color: #1C1E53 !important;
+    }
+    
+    h1{
+        @extend %title__48__primary;
+        color: #1C1E53 !important;
+        margin-bottom: 24px;
+    }
+
+    p{
+        color: #1C1E53 !important;
+        max-width: 733px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        @extend %title__16__primary;
+    }
+
+    a{
+        color: #1C1E53 !important;
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+}
+
+
+
+
+/*Design Styles*/
+#design{
+    padding-top: 128px;
+    padding-bottom: 96px;
+    .ap-tab-list{
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+            .ap-tab-link{
+                @extend %title__18__primary;
+        }
+    }
+
+   .all-card{
+    max-width: 600px;
+    padding-bottom: 30px;
+    transition: 0.5s;
+
+        &:hover{
+            box-shadow: 2px 2px 10px rgb(140, 137, 137)
+        }
+        h1{
+            @extend %title__38__primary;
+            margin-top: 24px;
+        }
+
+        p{
+            margin-top: 12px;
+            @extend %title__16__primary;
+            max-width: 580px;
+        
+        }
+
+        a{
+            margin-top: 24px;
+            @extend %title__18__primary;
+            img{
+                margin-left: 10px;
+            }
+        }
+
+        .card-img{
+            background: linear-gradient(131deg, #F4EDE1 16.74%, #98B1C6 103.17%);
+            max-width: 623px;
+            padding: 30px 39px;
+            img{
+                width: 100%;
+            }
+        }
+
+
+   }
+
+   .design__infos{
+    padding-top: 128px;
+    h1{
+        @extend %title__48__primary;
+        margin-bottom: 20px;
+        max-width: 730px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    p{
+        @extend %title__16__primary;
+        text-align:center;
+        margin-bottom: 40px;
+        max-width: 562px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    a{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 230px;
+        padding: 16px 67px;
+        border-radius: 50px;
+        background-color: #FCD980;
+        @extend %title__18__primary;
+    }
+   }
+
+    
+}
+
+
+
+
+
+/*Footer styles*/
+#footer{
+    background-color: #1C1E53;
+    padding-top: 104px;
+    padding-bottom: 90px;
+    .footer__left{
+        max-width: 517px;
+        a{
+            img{
+                width: 162px;
+                height: 32px;
+            }
+        }
+        p{
+            margin-top: 23px;
+            max-width: 400px;
+            @extend %title__16__white;
+        }
+
+        &--bottom{
+            margin-top: 86px;
+            padding: 18px 37px;
+            background-color: #FCD980;
+            h5{
+                @extend %title__18__primary;
+            }
+            p{
+                @extend %title__16__primary;
+            }
+        }
+    }
+    .footer__right{
+        max-width: 399px;
+        h1{
+            @extend %title__48__white;
+        }
+        p{
+            margin-top: 14px;
+            @extend %title__16__white;
+        }
+        .medias{
+            a{
+                font-size: 30px;
+                img{
+                    width: 30px;
+                }
+            }
+        }
+    }
+}

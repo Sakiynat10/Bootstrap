@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/contact.min.css" />
+    
+  </head>
+  <body>
+    
+    <div id="backtop">
+      <a href="#">
+        <img src="../images/space-awesome.svg" alt="space" />
+      </a>
+    </div>
+
+    <nav
+      id="navbar"
+      class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/Logo.svg" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-start w-100 text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              <img src="../images/Logo.svg" alt="" />
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-end align-items-center flex-grow-1 pe-3"
+            >
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/about.html">About us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="../pages/pricing.html"> Pricing </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../pages/work.html"
+                  >Work</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../pages/work.html"
+                  >Blog</a
+                >
+              </li>
+              <a href="../pages/contact.html" class="nav__contact text-light"
+                >Contact us</a
+              >
+            </ul>
+          </div>
+        </div>
+        <button id="mode-btn">
+          <img src="images/dark.svg" alt="dark" />
+        </button>
+      </div>
+    </nav>
+
+    <section id="contact">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore.
+        </p>
+        <div class="forms">
+            <div class="row">
+            
+                <div class="form-floating mb-3 col-md-6">
+                    <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword" class="mw-100">Enter your name</label>
+                </div>
+                <div class="form-floating mb-3  col-md-6">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email Adress</label>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                        <option selected>Provide context</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                        <option selected>Select Subject</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div>
+            </div>
+            <h6>
+                Message
+            </h6>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2" class="mw-100">Write your question</label>
+              </div>
+                
+            </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="footer__left col-12 col-lg-6">
+            <a href="#">
+              <img src="../images/Logo.svg" alt="" />
+            </a>
+            <p>
+              We are always open to discuss your project and improve your online
+              presence.
+            </p>
+            <div
+              class="footer__left--bottom d-flex justify-content-between row"
+            >
+              <div class="bottom__left mb-5 col-12 col-sm-6">
+                <h5>Email me at</h5>
+                <p>contact@website.com</p>
+              </div>
+              <div class="bottom__right mb-5 col-12 col-sm-6">
+                <h5>Call us</h5>
+                <p>0927 6277 28525</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__right col-12 col-lg-6">
+            <h1>Lets Talk!</h1>
+            <p>
+              We are always open to discuss your project, improve your online
+              presence and help with your UX/UI design challenges.
+            </p>
+            <div class="medias">
+              <a href="https://www.facebook.net/@asilbekxoliyorov">
+                <img src="../images/facebook.svg" alt="" />
+              </a>
+              <a href="https://www.twitter.net/@asilbekxoliyorov">
+                <img src="../images/twitter.svg" alt="" />
+              </a>
+              <a href="https://www.threads.net/@asilbekxoliyorov">
+                <img src="../images/instagram.svg" alt="" />
+              </a>
+              <a href="https://www.linkedin.net/@asilbekxoliyorov">
+                <img src="../images/linkedin.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

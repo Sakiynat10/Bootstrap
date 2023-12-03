@@ -6,35 +6,98 @@
     <title>Home</title>
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <link rel="stylesheet" href="./css/home.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <header id="navbar">
+    <div id="loading">
+      <div class="loadingio-spinner-dual-ring-rooabvpo2t"><div class="ldio-82s6ihcfinc">
+        <div></div><div><div></div></div>
+        </div></div>
+    </div>
+    <div id="backtop">
+      <a href="#">
+        <img src="./images/space-awesome.svg" alt="space" />
+      </a>
+    </div>
+
+    <nav
+      id="navbar"
+      class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top"
+    >
       <div class="container">
-        <div class="logo">
-          <img src="./images/Logo.svg" alt="Logo" />
+        <a class="navbar-brand" href="./index.html">
+          <img src="./images/Logo.svg" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-start w-100 text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              <img src="./images/Logo.svg" alt="" />
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-end align-items-center flex-grow-1 pe-3"
+            >
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/about.html">About us</a>
+              </li>
+              <li class="nav-item ">
+                <a
+                  class="nav-link "
+                  href="./pages/pricing.html"
+                >
+                  Pricing
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./pages/work.html">Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./pages/blog.html"
+                  >Blog</a
+                >
+              </li>
+              <a href="./pages/contact.html" class="nav__contact text-light">Contact us</a>
+            </ul>
+          </div>
         </div>
-        <div class="nav">
-          <ul>
-            <li>
-              <a href="./index.html">Home</a>
-            </li>
-            <li>
-              <a href="./pages/about.html">About us</a>
-            </li>
-            <li>
-              <a href="./pages/pricing.html">Pricing</a>
-            </li>
-            <li>
-              <a href="#">Work</a>
-            </li>
-            <li>
-              <a href="./pages/blog.html">Blog</a>
-            </li>
-          </ul>
-          <a href="#">Contact us</a>
-        </div>
+        <button id="mode-btn">
+          <img src="images/dark.svg" alt="dark" />
+        </button>
       </div>
-    </header>
+    </nav>
 
     <main>
       <section id="home">
@@ -100,7 +163,7 @@
           </div>
         </div>
       </section>
-      <section id="features">
+      <section id="features" class="features">
         <div class="container">
           <h1>Features</h1>
           <h2>Design that solves problems, one product at a time</h2>
@@ -162,7 +225,140 @@
           </div>
         </div>
       </section>
+      <section id="clients">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="client__left col-12 col-md-6">
+              <h1>What our clients say about us</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.
+              </p>
+            </div>
+            <div
+              id="carouselExampleAutoplaying"
+              class="carousel slide col-12 col-md-6"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <h2>
+                    "The best agency we’ve worked with so far. They understand
+                    our product and are able to add new features with a great
+                    focus."
+                  </h2>
+                  <div class="carousel__info mt-5 d-flex gap-3">
+                    <img src="./images/woman-client.png" alt="" />
+                    <div class="custom__info">
+                      <h4>Jenny Wilson</h4>
+                      <h6>Vice President</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <h2>
+                    "The best agency we’ve worked with so far. They understand
+                    our product and are able to add new features with a great
+                    focus."
+                  </h2>
+                  <div class="carousel__info mt-5 d-flex gap-3">
+                    <img src="./images/JohnSmith.svg" alt="" />
+                    <div class="custom__info">
+                      <h4>Jenny Wilson</h4>
+                      <h6>Vice President</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <h2>
+                    "The best agency we’ve worked with so far. They understand
+                    our product and are able to add new features with a great
+                    focus."
+                  </h2>
+                  <div class="carousel__info mt-5 d-flex gap-3">
+                    <img src="./images/PoulJones.svg" alt="" />
+                    <div class="custom__info">
+                      <h4>Jenny Wilson</h4>
+                      <h6>Vice President</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="footer__left col-12 col-lg-6">
+            <a href="#">
+              <img src="./images/Logo.svg" alt="" />
+            </a>
+            <p>
+              We are always open to discuss your project and improve your online
+              presence.
+            </p>
+            <div class="footer__left--bottom d-flex justify-content-between row">
+              <div class="bottom__left mb-5 col-12 col-sm-6">
+                <h5>Email me at</h5>
+                <p>contact@website.com</p>
+              </div>
+              <div class="bottom__right mb-5 col-12 col-sm-6">
+                <h5>Call us</h5>
+                <p>0927 6277 28525</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__right col-12 col-lg-6">
+            <h1>Lets Talk!</h1>
+            <p>
+              We are always open to discuss your project, improve your online
+              presence and help with your UX/UI design challenges.
+            </p>
+            <div class="medias">
+              <a href="https://www.facebook.net/@asilbekxoliyorov">
+                <img src="./images/facebook.svg" alt="">
+              </a>
+              <a href="https://www.twitter.net/@asilbekxoliyorov">
+                <img src="./images/twitter.svg" alt="">
+              </a>
+              <a href="https://www.threads.net/@asilbekxoliyorov">
+                <img src="./images/instagram.svg" alt="">
+              </a>
+              <a href="https://www.linkedin.net/@asilbekxoliyorov">
+                <img src="./images/linkedin.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -174,5 +370,17 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
